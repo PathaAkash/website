@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Women's Kurtis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo img {
+            width: 150px;
+            height: auto;
+        }
+        /* Traditional Wear Section */
+        .traditional-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .traditional-section h1 {
+            color: #ff4081;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .product {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: 10px;
+            width: 80%;
+            padding: 20px;
+            margin: 20px 0;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product img {
+            width: 250px;
+            height: auto;
+            object-fit: cover;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .product-details {
+            text-align: left;
+            max-width: 500px;
+        }
+        .product h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .product p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .product a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .product a:hover {
+            background-color: #e63a72;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Ikkat Weaves</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="women.html" class="active">Women</a>
+            <a href="mens.html">Men</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Kurtis Section -->
+    <div class="kurtis-section">
+        <h1>Women's Kurtis Collection</h1>
+        <div class="products">
+            <!-- Product 1 -->
+            <div class="product">
+                <img src="https://example.com/kurti1.jpg" alt="Traditional Ikkat Kurti">
+                <h3>Traditional Ikkat Kurti</h3>
+                <p>A beautiful handwoven Kurti in classic Ikkat patterns.</p>
+                <p class="price">₹1200</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 2 -->
+            <div class="product">
+                <img src="https://example.com/kurti2.jpg" alt="Stylish Ikkat Kurti">
+                <h3>Stylish Ikkat Kurti</h3>
+                <p>Elegant Kurti with modern cuts and traditional designs.</p>
+                <p class="price">₹1500</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 3 -->
+            <div class="product">
+                <img src="https://example.com/kurti3.jpg" alt="Casual Ikkat Kurti">
+                <h3>Casual Ikkat Kurti</h3>
+                <p>Perfect for everyday wear with soft, breathable fabric.</p>
+                <p class="price">₹1000</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+</body>
+</html>

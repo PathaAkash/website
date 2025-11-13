@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Online Shopping</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #860731;
+        }
+        nav input {
+            padding: 5px;
+            width: 300px;
+        }
+        nav .links {
+            display: flex;
+            align-items: center;
+        }
+        /* Banner Section */
+        .banner {
+           width: 100%;
+           height: 400px;
+           background-size:contain;
+           background-position: center;
+           display: flex;
+           justify-content: center;
+           align-items: center;
+           color: whitesmoke;
+           font-size: 36px;
+           font-weight: bold;
+           text-align: center;
+        }
+        .categories {
+        text-align: center;
+        padding: 40px 20px;
+    }
+    .category-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    .category {
+        background-color: #f3aeae;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 200px;
+    }
+    .category img {
+        width: 100%;
+        border-radius: 10px;
+    }
+    .category h3 {
+        margin: 15px 0;
+        font-size: 20px;
+        color: #333;
+    }
+    .category-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 15px;
+        background-color: #ff4081;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+    .category-button:hover {
+        background-color: #e63a72;
+    }
+        /* Product Section */
+        .products {
+            padding: 40px;
+            background-color: #f3aeae;
+        }
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .product img {
+            width: 100%;
+            border-radius: 10px;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+        .product h3 {
+            margin: 10px 0;
+            font-size: 18px;
+        }
+        .product p {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 10px;
+        }
+        .product .price {
+            font-size: 16px;
+            color: #28a745;
+            margin-bottom: 10px;
+        }
+        .product .add-to-cart-btn {
+            background-color: #e63a72;
+            color: #e63a72;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        .product .add-to-cart-btn:hover {
+            background-color: #e07b9c;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            Ikkat Weaves
+        </div>
+        <input type="text" placeholder="Search for products, brands and more">
+        <div class="links">
+            <a href="WEBSITE.html"class="active">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html" >Cart</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Registration</a>
+        </div>
+    </nav>
+
+    <!-- Banner Section -->
+    <div class="banner" id="banner">
+        Welcome to Ikkat Weaves
+    </div>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop By Categories</h2>
+        <div class="category-grid">
+            <!-- Sarees Category -->
+            <div class="category">
+                <img src="image2.jpg" alt="Sarees">
+                <h3>Sarees</h3>
+                <a href="sarees.html" class="category-button">Shop Sarees</a>
+            </div>
+    
+            <!-- Men's Clothing Category -->
+            <div class="category">
+                <img src="images.jpg" alt="Men's Clothing">
+                <h3>Men's Clothing</h3>
+                <a href="mens.html" class="category-button">Shop Men's Clothing</a>
+            </div>
+    
+            <!-- Kids' Clothing Category -->
+            <div class="category">
+                <img src="kid.jpg" alt="Kids Clothing">
+                <h3>Kids' Clothing</h3>
+                <a href="kids.html" class="category-button">Shop Kids' Clothing</a>
+            </div>
+        </div>
+    </section>
+    <section class="categories">
+        <h2>Trending Product</h2>
+    <div class="product-grid">
+        <!-- Product 1 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuas9GIKVevaRYZMDQFZqoPUCpXhxmk3XkGQ&s" alt="Product 1">
+            <h3>pochampally silk</h3>
+            <p>Beautiful traditional Ikkat saree made with high-quality fabric.</p>
+            <p class="price">₹ 4500/-</p>
+            <button onclick="addToCart('Product Name 1', 4500, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRuas9GIKVevaRYZMDQFZqoPUCpXhxmk3XkGQ&s')">Add to Cart</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREieSYoLArJWuOLRs3U3wCCY5x6wQY8ePE2A&s" alt="Product 2">
+            <h3>cotton silk</h3>
+            <p>Stylish men's kurta with intricate Ikkat patterns.</p>
+            <p class="price">₹ 1000/-</p>
+            <button onclick="addToCart('Product Name 2', 1000, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcREieSYoLArJWuOLRs3U3wCCY5x6wQY8ePE2A&s')">Add to Cart</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="product">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhaLVHZNatU7bud-Zdrk265x9Qohl_W8qZw&s" alt="Product 3">
+            <h3></h3>
+            <p>Kids' clothing with soft, breathable fabric for comfort.</p>
+            <p class="price">₹ 1800/-</p>
+            <button onclick="addToCart('Product Name 3', 1800, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTIhaLVHZNatU7bud-Zdrk265x9Qohl_W8qZw&s')">Add to Cart</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="product">
+            <img src="https://www.luxurionworld.com/cdn/shop/files/ID1G2BP223051001_Blue_Gota_Patti_Chinon_Dupatta_2.jpg?v=1683709773&width=1445" alt="Product 4">
+            <h3>Product Name 4</h3>
+            <p>Elegant Ikkat shawl perfect for special occasions.</p>
+            <p class="price">₹ 1500/-</p>
+            <button onclick="addToCart('Product Name 4', 1500, 'https://www.luxurionworld.com/cdn/shop/files/ID1G2BP223051001_Blue_Gota_Patti_Chinon_Dupatta_2.jpg?v=1683709773&width=1445')">Add to Cart</button>
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+    <script>
+        // JavaScript for banner image scroll
+        const banner = document.getElementById('banner');
+        const bannerImages = [
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjLQCwf6O07yQPqp_mmqXDCIff9-9EEPLSzQ&s', 
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT2eiHuT8WHYxuVInv715buuugkoI9SOECPWA&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ7vXBXJj2zKkUXSWURxxBluLAH3ksGJHoRHw&s',
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT74RUYr1fqTRG8Xc4THP3tT7Cr03QaPBpang&s', 
+            'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvYyC4gMICf534teFXNwx5W1URD8rZRwlVMQ&s'
+        ];
+        let currentImageIndex = 0;
+
+        function changeBannerImage() {
+            currentImageIndex = (currentImageIndex + 1) % bannerImages.length;
+            banner.style.backgroundImage = `url(${bannerImages[currentImageIndex]})`;
+        }
+
+        // Change banner image every 3 seconds
+        setInterval(changeBannerImage, 4000);
+        function addToCart(name, price, image) {
+        let cart = JSON.parse(localStorage.getItem('cart')) || [];
+        let existingItem = cart.find(item => item.name === name);
+
+        if (existingItem) {
+            existingItem.quantity += 1;
+        } else {
+            cart.push({ name, price, image, quantity: 1 });
+        }
+
+        localStorage.setItem('cart', JSON.stringify(cart));
+        alert(name + ' has been added to your cart.');
+    }
+    </script>
+
+</body>
+</html>

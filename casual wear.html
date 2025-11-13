@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Men's Casual Wear</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo img {
+            width: 150px;
+            height: auto;
+        }
+        /* Casual Wear Section */
+        .casual-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .casual-section h1 {
+            color: #2196f3;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .product {
+            background-color: white;
+            display: flex;
+            align-items: center;
+            width: 80%;
+            max-width: 800px;
+            margin: 20px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product img {
+            width: 200px;
+            height: auto;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+        .product-info {
+            text-align: left;
+            flex: 1;
+        }
+        .product-info h3 {
+            margin: 0;
+            color: #333;
+        }
+        .product-info p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .product-info a {
+            display: inline-block;
+            padding: 10px 15px;
+            background-color: #2196f3;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .product-info a:hover {
+            background-color: #1976d2;
+        }
+        .product:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            <img src="LOGO.png" alt="Ikkat Weaves Logo">
+        </div>
+        <div class="links">
+            <a href="WEBSITE.html">Home</a>
+            <a href="Categories.html">Categories</a>
+            <a href="mens.html"class="active">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html" >Cart</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Registration</a>
+        </div>
+    </nav>
+
+    <!-- Men's Casual Wear Section -->
+    <div class="casual-section">
+        <h1>Men's Casual Wear</h1>
+        <div class="products">
+            <!-- Product 1: Casual Shirt -->
+            <div class="product">
+                <img src="https://londonprints.in/cdn/shop/files/896-1.jpg?v=1711084588&width=1445" alt="Casual Shirt">
+                <div class="product-info">
+                    <h3>Ikkat Casual Shirt</h3>
+                    <p>Handwoven casual shirts in soft cotton with unique Ikkat patterns, perfect for a relaxed day out.</p>
+                    <a href="Shirt.html">View Details</a>
+                </div>
+            </div>
+            <!-- Product 2: Casual Pants -->
+            <div class="product">
+                <img src="data:image/jpeg;base64,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" alt="Casual Pants">
+                <div class="product-info">
+                    <h3> Casual Pants</h3>
+                    <p>Comfortable and stylish pants made with Ikkat fabric, ideal for both casual and semi-formal occasions.</p>
+                    <a href="#">View Details</a>
+                </div>
+            </div>
+            <!-- Product 3: T-Shirt -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqcePN7djSoRtjr59C1XLw0-ZZv3BPb5Eqww&s" alt="T-Shirt">
+                <div class="product-info">
+                    <h3> T-Shirt</h3>
+                    <p>Modern fit T-shirts infused with Ikkat designs, providing a blend of traditional art and contemporary style.</p>
+                    <a href="#">View Details</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+</body>
+</html>

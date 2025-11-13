@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Casual Shirt - Product</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #860731;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .active {
+            color: #860731;
+            font-weight: bold;
+        }
+        /* Product Page */
+        .product-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .product-details h1 {
+            color: #860731;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .product-details p {
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .price {
+            color: #860731;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .add-to-cart-btn {
+            background-color: #860731;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #6d052f;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">Ikkat Weaves</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="men.html" class="active">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="https://londonprints.in/cdn/shop/files/896-1.jpg?v=1711084588&width=1445" alt="Ikkat Casual Shirt">
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>Ikkat Casual Shirt</h1>
+            <p>Handwoven casual shirts in soft cotton with unique Ikkat patterns, perfect for a relaxed day out.</p>
+            <ul>
+                <li>100% Handwoven Cotton</li>
+                <li>Unique Ikkat Patterns</li>
+                <li>Available in various sizes</li>
+                <li>Perfect for casual wear</li>
+            </ul>
+            <p class="price">Price: ₹1500</p>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function addToCart() {
+            // Product details
+            const product = {
+                name: "Ikkat Casual Shirt",
+                price: 1500,
+                image: "https://londonprints.in/cdn/shop/files/896-1.jpg?v=1711084588&width=1445",
+                quantity: 1
+            };
+
+            // Get the cart from local storage or create an empty array if not present
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the product is already in the cart
+            const existingItem = cart.find(item => item.name === product.name);
+            if (existingItem) {
+                existingItem.quantity += 1; // Increase quantity if already in cart
+            } else {
+                cart.push(product); // Add new product to the cart
+            }
+
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Optional: Display a confirmation message
+            alert("Ikkat Casual Shirt has been added to your cart.");
+        }
+    </script>
+
+</body>
+</html>

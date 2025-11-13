@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Categories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo img {
+            width: 150px;
+            height: auto;
+        }
+        /* Categories Section */
+        .categories-container {
+            padding: 40px;
+        }
+        .categories-title {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #ff4081;
+        }
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+        .category {
+            background-color: #f3aeae;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .category img {
+            width: 100%;
+            border-radius: 10px;
+            margin-bottom: 15px;
+        }
+        .category h3 {
+            margin: 10px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .category:hover {
+            transform: scale(1.05);
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: bottom;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            Ikkat Weaves
+        </div>
+        <div class="links">
+            <a href="WEBSITE.html">Home</a>
+            <a href="Categories.html"class="active">Categories</a>
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html" >Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Categories Section -->
+    <section class="categories">
+        <h2>Shop By Categories</h2>
+        <div class="category-grid">
+            <!-- Sarees Category -->
+            <div class="category">
+                <img src="image2.jpg" alt="Sarees">
+                <h3>Sarees</h3>
+                <a href="sarees.html" class="category-button">Shop Sarees</a>
+            </div>
+    
+            <!-- Men's Clothing Category -->
+            <div class="category">
+                <img src="images.jpg" alt="Men's Clothing">
+                <h3>Men's Clothing</h3>
+                <a href="mens.html" class="category-button">Shop Men's Clothing</a>
+            </div>
+    
+            <!-- Kids' Clothing Category -->
+            <div class="category">
+                <img src="kid.jpg" alt="Kids Clothing">
+                <h3>Kids' Clothing</h3>
+                <a href="kids.html" class="category-button">Shop Kids' Clothing</a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+</body>
+</html>

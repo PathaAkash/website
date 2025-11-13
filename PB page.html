@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Checkout</title>
+    <style>
+        /* Basic Page Styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #860731;
+        }
+        nav input {
+            padding: 5px;
+            width: 300px;
+        }
+        nav .links {
+            display: flex;
+            align-items: center;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+        }
+        h1, h2 {
+            color: #860731;
+            text-align: center;
+        }
+        .section {
+            margin: 20px 0;
+        }
+        /* Cart Summary Table */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+        }
+        table thead {
+            background-color: #f3aeae;
+        }
+        table th, table td {
+            padding: 15px;
+            text-align: center;
+            border: 1px solid #ddd;
+        }
+        table th {
+            font-size: 18px;
+            color: #333;
+        }
+        table td img {
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        /* Form Styles */
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+        label {
+            font-weight: bold;
+            color: #333;
+        }
+        input[type="text"], input[type="email"], input[type="number"], select {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        /* Total Section */
+        .total {
+            text-align: right;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #333;
+        }
+        /* Button Styling */
+        .checkout-btn {
+            background-color: #860731;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .checkout-btn:hover {
+            background-color: #6d052f;
+        }
+        .success-message {
+            text-align: center;
+            font-size: 20px;
+            color: #333;
+            margin-top: 30px;
+            font-weight: bold;
+        }
+        .continue-btn {
+            background-color: #860731;
+            color: white;
+            border: none;
+            padding: 15px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            transition: background-color 0.3s ease;
+        }
+        .continue-btn:hover {
+            background-color: #6d052f;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <div class="logo">
+            Ikkat Weaves
+        </div>
+        <input type="text" placeholder="Search for products, brands and more">
+        <div class="links">
+            <a href="WEBSITE.html"class="active">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html" >Cart</a>
+            <a href="login.html">Login</a>
+            <a href="registration.html">Registration</a>
+        </div>
+    </nav>
+        <!-- Cart Summary Section -->
+        <div class="section">
+            <h2>Order Summary</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product Image</th>
+                        <th>Product Name</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-summary">
+                    <!-- Cart items will be dynamically inserted here -->
+                </tbody>
+            </table>
+            <div class="total" id="order-total">Total: ₹0</div>
+        </div>
+
+        <!-- Shipping Details Section -->
+        <div class="section">
+            <h2>Shipping Details</h2>
+            <form id="shipping-form">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" required>
+
+                <label for="address">Address</label>
+                <input type="text" id="address" required>
+
+                <label for="city">City</label>
+                <input type="text" id="city" required>
+
+                <label for="state">State</label>
+                <input type="text" id="state" required>
+
+                <label for="zip">ZIP Code</label>
+                <input type="number" id="zip" required>
+            </form>
+        </div>
+
+        <!-- Payment Section -->
+        <div class="section">
+            <h2>Payment Method</h2>
+            <form id="payment-form">
+                <label for="payment-method">Select Payment Method</label>
+                <select id="payment-method" required>
+                    <option value="cod">Cash on Delivery</option>
+                    <option value="card">Credit/Debit Card</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Buy Now Button -->
+        <button class="checkout-btn" onclick="placeOrder()">Buy Now</button>
+
+        <!-- Success Message -->
+        <div class="success-message" id="success-message" style="display: none;">
+            Your order has been placed successfully. <br> <button class="continue-btn" onclick="continueShopping()">Continue Shopping</button>
+        </div>
+    </div>
+
+    <script>
+        // Load Cart from localStorage and Display
+        function loadCart() {
+            const cartSummary = document.getElementById('cart-summary');
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            cartSummary.innerHTML = '';
+
+            let total = 0;
+            cart.forEach(item => {
+                const subtotal = item.price * item.quantity;
+                total += subtotal;
+
+                const row = document.createElement('tr');
+                row.innerHTML = `
+                    <td><img src="${item.image}" alt="${item.name}"></td>
+                    <td>${item.name}</td>
+                    <td>₹${item.price}</td>
+                    <td>${item.quantity}</td>
+                    <td>₹${subtotal}</td>
+                `;
+                cartSummary.appendChild(row);
+            });
+
+            document.getElementById('order-total').textContent = 'Total: ₹' + total;
+        }
+
+        // Place Order
+        function placeOrder() {
+            // Validate Forms
+            const name = document.getElementById('name').value;
+            const address = document.getElementById('address').value;
+            const city = document.getElementById('city').value;
+            const state = document.getElementById('state').value;
+            const zip = document.getElementById('zip').value;
+            const paymentMethod = document.getElementById('payment-method').value;
+
+            if (!name || !address || !city || !state || !zip || !paymentMethod) {
+                alert('Please fill in all fields.');
+                return;
+            }
+
+            // Simulate Order Processing
+            localStorage.removeItem('cart');  // Clear Cart
+
+            // Show Success Message
+            document.getElementById('success-message').style.display = 'block';
+            document.querySelector('.container').style.display = 'none';  // Hide the checkout section
+        }
+
+        // Continue Shopping
+        function continueShopping() {
+            window.location.href = 'index.html';  // Redirect to homepage or shopping page
+        }
+
+        // Initialize Cart on Page Load
+        document.addEventListener('DOMContentLoaded', () => {
+            loadCart();
+        });
+    </script>
+
+</body>
+</html>

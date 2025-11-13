@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #860731;
+        }
+        nav input {
+            padding: 5px;
+            width: 300px;
+        }
+        nav .links {
+            display: flex;
+            align-items: center;
+        }
+        /* Profile Section */
+        .profile-section {
+            padding: 40px;
+            max-width: 600px;
+            margin: 40px auto;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #860731;
+            margin-bottom: 20px;
+        }
+        .profile-info {
+            margin-bottom: 20px;
+        }
+        .profile-info label {
+            display: block;
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 5px;
+        }
+        .profile-info input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .profile-actions {
+            text-align: center;
+        }
+        .edit-btn, .logout-btn {
+            padding: 10px 20px;
+            background-color: #ff4081;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .edit-btn:hover, .logout-btn:hover {
+            background-color: #e63a72;
+        }
+        .signup-link {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .signup-link a {
+            color: #860731;
+            text-decoration: none;
+        }
+        .signup-link a:hover {
+            text-decoration: underline;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            Ikkat Weaves
+        </div>
+        <input type="text" placeholder="Search for products, brands and more">
+        <div class="links">
+            <a href="WEBSITE.html">Home</a>
+            <a href="categories.html">Categories</a>
+            <a href="mens.html">Men</a>
+            <a href="women.html">Women</a>
+            <a href="kids.html">Kids</a>
+            <a href="cart.html">Cart</a>
+            <a href="profile.html"class="active">Profile</a>
+        </div>
+    </nav>
+
+    <!-- Profile Section -->
+    <div class="profile-section">
+        <h1>Your Profile</h1>
+        <div class="profile-info">
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="John Doe" value="John Doe">
+            
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" placeholder="john@example.com" value="john@example.com">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" name="phone" placeholder="+1234567890" value="+1234567890">
+        </div>
+        <div class="profile-actions">
+            <button class="edit-btn">Edit Profile</button>
+            <button class="logout-btn">Logout</button>
+        </div>
+        
+        <!-- If the user is not registered, show a link to registration page -->
+        <div class="signup-link">
+            <p>Don't have an account? <a href="registration.html">Sign Up</a></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+</body>
+</html>

@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Boys' Clothing</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        /* Navigation Bar */
+        nav {
+            background-color: #f3aeae;
+            padding: 10px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        nav .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: #860731;
+        }
+        nav a {
+            text-decoration: none;
+            color: #333;
+            margin: 0 15px;
+            font-size: 16px;
+        }
+        nav .active {
+            color: #860731;
+            font-weight: bold;
+        }
+        /* Boys Clothing Section */
+        .boys-section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+        .boys-section h1 {
+            color: #860731;
+            margin-bottom: 20px;
+        }
+        .products {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .product {
+            background-color: white;
+            width: 250px;
+            border-radius: 10px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+        .product img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product h3 {
+            color: #333;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+        .product p {
+            color: #666;
+            margin: 10px 0;
+        }
+        .product .price {
+            color: #860731;
+            font-size: 16px;
+            margin: 5px 0;
+        }
+        .product button {
+            background-color: #860731;
+            color: white;
+            border: none;
+            padding: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .product button:hover {
+            background-color: #6d052f;
+        }
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <div class="logo">
+            Ikkat Weaves
+        </div>
+        <div>
+            <a href="WEBSITE.html">Home</a>
+            <a href="Categories.html">Categories</a>
+            <a href="mens.html" >mens</a>
+            <a href="women.html">women</a>
+            <a href="kids.html"class ="active">Kids</a>
+            <a href="cart.html">Cart</a>
+            <a href="login.html">Login</a>
+        </div>
+    </nav>
+
+    <!-- Boys Clothing Section -->
+    <div class="boys-section">
+        <h1>Boys' Clothing Collection</h1>
+        <div class="products">
+            <!-- Product 1: Ikkat Shirt -->
+            <div class="product">
+                <img src="https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQYizm2G-xGxjSCUzA8KzWuXpI5ql9p6KhUvivUmbnmkyEcO6u5gEH8VTYRQlRAuX7FRQTjFu0VwmGA4mtH5nYJALiuzm_vjbvXYdQZ1gs" alt="Ikkat Shirt">
+                <h3>Ikkat Shirt</h3>
+                <p>Handwoven shirt in vibrant colors for a stylish look.</p>
+                <p class="price">₹800</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 2: Ikkat Kurta -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrR8mrcjHz5AtSsA_45RVAjY9ThLVfMHjm-A&s" alt="Ikkat Kurta">
+                <h3>Ikkat Kurta</h3>
+                <p>Comfortable and trendy Kurta perfect for festive occasions.</p>
+                <p class="price">₹1200</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 3: Ikkat Pajama Set -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTdPZ4zhmWotyMF3Jp8aJAHfBGMyrkuDOK-jg&s" alt="Ikkat Pajama Set">
+                <h3>Ikkat Pajama Set</h3>
+                <p>Soft and cozy pajama set, perfect for a comfortable sleep.</p>
+                <p class="price">₹900</p>
+                <button>Add to Cart</button>
+            </div>
+            <!-- Product 4: Ikkat Jacket -->
+            <div class="product">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS21hbxnXtGVjsa3QpHJpUCyMj37jZsEBI3AA&s" alt="Ikkat Jacket">
+                <h3>Ikkat Jacket</h3>
+                <p>Stylish jacket to add a pop of color to any outfit.</p>
+                <p class="price">₹1500</p>
+                <button>Add to Cart</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        &copy; 2024 Ikkat Weaves. All rights reserved.
+    </footer>
+
+</body>
+</html>

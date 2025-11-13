@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ikkat Weaves - Classic Black Ikkat Saree</title>
+    <style>
+        /* Basic styling */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .product-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .product-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+        }
+        .product-image img {
+            width: 100%;
+            max-width: 400px;
+            border-radius: 10px;
+        }
+        .product-details {
+            flex: 1;
+            min-width: 300px;
+            padding: 20px;
+        }
+        .product-details h1 {
+            color: #860731;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .product-details p {
+            color: #555;
+            line-height: 1.6;
+            margin: 10px 0;
+        }
+        .price {
+            color: #860731;
+            font-size: 22px;
+            font-weight: bold;
+            margin: 20px 0;
+        }
+        .add-to-cart-btn {
+            background-color: #860731;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .add-to-cart-btn:hover {
+            background-color: #6d052f;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Product Section -->
+    <div class="product-container">
+        <!-- Product Image -->
+        <div class="product-image">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatEY-ZyjyZbUJEGnhEyG8zIaZswWmDcrDXw&s" alt="Classic Black Ikkat Saree">
+        </div>
+
+        <!-- Product Details -->
+        <div class="product-details">
+            <h1>Classic Black Ikkat Saree</h1>
+            <p>Classic black saree with rich patterns and premium fabric. This saree is perfect for traditional occasions and offers a timeless style with its intricate Ikkat patterns and high-quality material.</p>
+            <ul>
+                <li>100% Premium Fabric</li>
+                <li>Handwoven Ikkat Pattern</li>
+                <li>Elegant and versatile for multiple occasions</li>
+            </ul>
+            <p class="price">Price: ₹8199</p>
+            <button class="add-to-cart-btn" onclick="addToCart()">Add to Cart</button>
+        </div>
+    </div>
+
+    <script>
+        function addToCart() {
+            // Define the product details
+            const product = {
+                name: "Classic Black Ikkat Saree",
+                price: 8199,
+                image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSatEY-ZyjyZbUJEGnhEyG8zIaZswWmDcrDXw&s",
+                quantity: 1
+            };
+
+            // Get the cart from local storage or create an empty array if not present
+            let cart = JSON.parse(localStorage.getItem('cart')) || [];
+
+            // Check if the product is already in the cart
+            const existingItem = cart.find(item => item.name === product.name);
+            if (existingItem) {
+                existingItem.quantity += 1; // Increase quantity if already in cart
+            } else {
+                cart.push(product); // Add new product to the cart
+            }
+
+            // Save the updated cart back to local storage
+            localStorage.setItem('cart', JSON.stringify(cart));
+
+            // Optional: Display a confirmation message
+            alert("Classic Black Ikkat Saree has been added to your cart.");
+        }
+    </script>
+
+</body>
+</html>
